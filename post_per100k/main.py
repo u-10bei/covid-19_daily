@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# カレントディレクトリの設定
+from util import credential as cred
+import os
+os.chdir(cred.CH_DIR)
 # ＨＴＭＬからの情報収集
 # エラーが出たら、pip install lxml
 import pandas as pd
@@ -61,7 +66,6 @@ msg_text = 'おはようございます。\n表題の件について、添付フ
 
 # メールサーバ接続　アカウントとかパスとかは、自分で作ってね
 import smtplib
-from util import credential as cred
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.application import MIMEApplication
