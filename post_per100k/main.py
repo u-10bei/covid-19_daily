@@ -1,8 +1,3 @@
-# 作業ディレクトリの設定
-import os
-w_dir = './post_per100k'
-os.chdir(w_dir)
-
 # ＨＴＭＬからの情報収集
 # エラーが出たら、pip install lxml
 import pandas as pd
@@ -36,7 +31,7 @@ wareki = reiwa + yesterday.strftime('%m%d')
 wareki2 = reiwa2 + str(yesterday.month) + '月' + str(yesterday.day) + '日現在'
 
 # pptxの呼び出し
-ppturl = 'hinagata.pptx'
+ppturl = './hinagata.pptx'
 prs = Presentation(ppturl)
 sld = prs.slides[0]
 
